@@ -6,7 +6,6 @@ import TheirMessage from "../components/TheirMessage"
 const ChatFeed = ( props ) => {
   const { chats, activeChat, userName, messages } = props
   const chat = chats && chats[activeChat]
-
   const renderMessages = () => {
     const keys = Object.keys(messages)
     return keys.map((key, index) => {
@@ -20,10 +19,9 @@ const ChatFeed = ( props ) => {
               isMyMessege
                 ? <MyMessage />
                 :<TheirMessage />
-
             }
           </div>
-          <div className="red-receipts" style={{ marginRight: isMyMessege ? '18px' : '0px', marginLeft: isMyMessege ? '0px' : '68px' }}>
+          <div className="red-receipts" stye={{ marginRight: isMyMessege ? '18px' : '0px', marginLeft: isMyMessege ? '0px' : '68px' }}>
           red-receipts
           </div>
         </div>
